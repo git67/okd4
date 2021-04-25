@@ -1,0 +1,24 @@
+apiVersion: v1
+baseDomain: hs.local
+metadata:
+  name: lab
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 0
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14 
+    hostPrefix: 23 
+  networkType: OVNKubernetes
+  serviceNetwork: 
+  - 172.30.0.0/16
+platform:
+  none: {}
+fips: false
+pullSecret: 'HIER das PULL Secret eintragen'
+sshKey: 'HIER den PUBLIC SSH-Key eintragen'
