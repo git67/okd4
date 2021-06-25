@@ -5,4 +5,4 @@ menu title **** OpenShift 4 Bootstrap PXE Boot Menu ****
 
 label Install Fedora CoreOS Bootstrap Node
  kernel /okd4/cos-kernel
- append console=tty0 console=ttyS0 ip=dhcp rd.neednet=1 coreos.inst.install_dev=sda coreos.inst=yes coreos.inst.image_url=http://192.168.56.30:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.56.30:8080/okd4/bootstrap.ign initrd=/okd4/cos-initramfs,/okd4/cos-live-rootfs
+ append console=tty0 console=ttyS0 ip=dhcp rd.neednet=1 coreos.inst.install_dev=sda coreos.inst=yes coreos.inst.image_url=http://192.168.56.30:8080/okd4/cos.raw.xz coreos.inst.ignition_url=http://192.168.56.30:8080/okd4/bootstrap.ign initrd=/okd4/cos-initramfs,/okd4/cos-live-rootfs
