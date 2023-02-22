@@ -21,14 +21,15 @@ LOCAL_DIR="${BASE_DIR}/local"
 INSTALL_CONFIG="${LOCAL_DIR}/install-config.yaml"
 
 OPENSHIFT_URI="https://github.com/openshift/okd/releases/download"
-OKD_RELEASE="4.7.0-0.okd-2021-07-03-190901"
+#OKD_RELEASE="4.7.0-0.okd-2021-07-03-190901"
+OKD_RELEASE="4.12.0-0.okd-2023-02-18-033438"
 
 CLIENT="${OPENSHIFT_URI}/${OKD_RELEASE}/openshift-client-linux-${OKD_RELEASE}.tar.gz"
 INSTALLER="${OPENSHIFT_URI}/${OKD_RELEASE}/openshift-install-linux-${OKD_RELEASE}.tar.gz"
 
 #FCOS_RELEASE="33.20210201.3.0"
 # https://getfedora.org/de/coreos/download?tab=metal_virtualized&stream=stable
-FCOS_RELEASE="34.20210611.3.0"
+FCOS_RELEASE="37.20230122.3.0"
 FCOS_URI="https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/${FCOS_RELEASE}/x86_64"
 
 KERNEL="${FCOS_URI}/fedora-coreos-${FCOS_RELEASE}-live-kernel-x86_64"
