@@ -1,5 +1,5 @@
 $TTL    604800
-@       IN      SOA     okd-infra.hs.local. admin.hs.local. (
+@       IN      SOA     okd-infra.hs.org. admin.hs.org. (
                   6     ; Serial
              604800     ; Refresh
               86400     ; Retry
@@ -8,18 +8,18 @@ $TTL    604800
 )
 
 ; name servers - NS records
-    IN      NS      okd-infra.hs.local.
+    IN      NS      okd-infra.hs.org.
 
 ; name servers - PTR records
-30    IN    PTR    okd-infra.hs.local.
+30    IN    PTR    okd-infra.hs.org.
 
 ; OpenShift Container Platform Cluster - PTR records
-64    IN    PTR    okd-bootstrap.lab.hs.local.
-51    IN    PTR    okd-m1.lab.hs.local.
-52    IN    PTR    okd-m2.lab.hs.local.
-53    IN    PTR    okd-m3.lab.hs.local.
-61    IN    PTR    okd-n1.lab.hs.local.
-62    IN    PTR    okd-n2.lab.hs.local.
-63    IN    PTR    okd-n3.lab.hs.local.
-30    IN    PTR    api.lab.hs.local.
-30    IN    PTR    api-int.lab.hs.local.
+64    IN    PTR    okd-bootstrap.lab.hs.org.
+51    IN    PTR    okd-m1.lab.hs.org.
+52    IN    PTR    okd-m2.lab.hs.org.
+53    IN    PTR    okd-m3.lab.hs.org.
+61    IN    PTR    okd-n1.lab.hs.org.
+62    IN    PTR    okd-n2.lab.hs.org.
+63    IN    PTR    okd-n3.lab.hs.org.
+30    IN    PTR    api.lab.hs.org.
+30    IN    PTR    api-int.lab.hs.org.

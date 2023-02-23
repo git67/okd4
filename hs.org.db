@@ -1,0 +1,39 @@
+$TTL    604800
+@       IN      SOA     okd-infra.hs.org. admin.hs.org. (
+                  1     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            241964     ; Expire
+             604800     ; Negative Cache TTL
+)
+
+; name servers - NS records
+    IN      NS      okd-infra
+
+; name servers - A records
+okd-infra.hs.org.          IN      A       192.168.56.30
+
+; OpenShift Container Platform Cluster - A records
+okd-bootstrap.lab.hs.org.        IN      A      192.168.56.64
+okd-m1.lab.hs.org.        IN      A      192.168.56.51
+okd-m2.lab.hs.org.         IN      A      192.168.56.52
+okd-m3.lab.hs.org.         IN      A      192.168.56.53
+okd-n1.lab.hs.org.        IN      A      192.168.56.61
+okd-n2.lab.hs.org.        IN      A      192.168.56.62
+okd-n3.lab.hs.org.        IN      A      192.168.56.63
+
+; OpenShift internal cluster IPs - A records
+api.lab.hs.org.    IN    A    192.168.56.30
+api-int.lab.hs.org.    IN    A    192.168.56.30
+*.apps.lab.hs.org.    IN    A    192.168.56.30
+etcd-0.lab.hs.org.    IN    A     192.168.56.51
+etcd-1.lab.hs.org.    IN    A     192.168.56.52
+etcd-2.lab.hs.org.    IN    A    192.168.56.53
+console-openshift-console.apps.lab.hs.org.     IN     A     192.168.56.30
+oauth-openshift.apps.lab.hs.org.     IN     A     192.168.56.30
+
+; OpenShift internal cluster IPs - SRV records
+_etcd-server-ssl._tcp.lab.hs.org.    86400     IN    SRV     0    10    2380    etcd-0.lab
+_etcd-server-ssl._tcp.lab.hs.org.    86400     IN    SRV     0    10    2380    etcd-1.lab
+_etcd-server-ssl._tcp.lab.hs.org.    86400     IN    SRV     0    10    2380    etcd-2.lab
+
